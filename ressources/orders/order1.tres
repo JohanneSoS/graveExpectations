@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Order" format=3 uid="uid://b3y5cyrga7lh4"]
+
+[ext_resource type="Script" uid="uid://y1psnwajvs3u" path="res://scripts/stat.gd" id="1_uajbf"]
+[ext_resource type="Script" uid="uid://b4etl4b5t3ytb" path="res://scripts/order.gd" id="2_oemqa"]
+
+[sub_resource type="Resource" id="Resource_a878a"]
+script = ExtResource("1_uajbf")
+value = 56.604
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
+[sub_resource type="Resource" id="Resource_4c2bk"]
+script = ExtResource("1_uajbf")
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
+[sub_resource type="Resource" id="Resource_j0mu8"]
+script = ExtResource("1_uajbf")
+value = 49.509
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
+[resource]
+script = ExtResource("2_oemqa")
+required_stats = Array[ExtResource("1_uajbf")]([SubResource("Resource_a878a"), SubResource("Resource_4c2bk"), SubResource("Resource_j0mu8")])
+metadata/_custom_type_script = "uid://b4etl4b5t3ytb"

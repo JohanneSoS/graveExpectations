@@ -1,0 +1,19 @@
+class_name GameEnums
+
+enum PersonalityStat {
+	SOCIABILITY,
+	RESPONSIBILITY,
+	DAILY_RHYTHM,
+	EXPRESSION,
+	PATIENCE,
+	ADAPTABILITY
+}
+
+enum BodyPartType {
+	HEAD,
+	TORSO,
+	LEFT_ARM,
+	RIGHT_ARM,
+	LEFT_LEG,
+	RIGHT_LEG
+}

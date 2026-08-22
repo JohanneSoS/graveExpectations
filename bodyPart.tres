@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://bs32yb7vkn6b3"]
+
+[sub_resource type="GDScript" id="GDScript_nn6as"]
+script/source = "# body_part.gd
+# class_name BodyPart
+extends Resource
+
+@export var body_part_type: BodyPartType
+@export var active_stats: Array[PersonalityStat] = []
+
+@export var stats: Dictionary = {}
+"
+
+[resource]
+script = SubResource("GDScript_nn6as")

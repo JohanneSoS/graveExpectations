@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c4kl7hr7cgkl0"]
+
+[ext_resource type="Script" uid="uid://ujwmlhlx73dr" path="res://scripts/bodypart_node.gd" id="1_0dmsj"]
+
+[node name="bodyPart" type="Node2D" unique_id=1694615725]
+script = ExtResource("1_0dmsj")
