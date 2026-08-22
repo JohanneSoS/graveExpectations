@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Order" format=3 uid="uid://clbctcgjnowbf"]
+
+[ext_resource type="Script" uid="uid://y1psnwajvs3u" path="res://scripts/stat.gd" id="1_jgwmr"]
+[ext_resource type="Script" uid="uid://b4etl4b5t3ytb" path="res://scripts/order.gd" id="2_ag8et"]
+
+[sub_resource type="Resource" id="Resource_e5kb4"]
+script = ExtResource("1_jgwmr")
+stat = 2
+value = 50.0
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
+[sub_resource type="Resource" id="Resource_ko5bj"]
+script = ExtResource("1_jgwmr")
+stat = 5
+value = 50.0
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
+[sub_resource type="Resource" id="Resource_unhl3"]
+script = ExtResource("1_jgwmr")
+stat = 1
+value = 50.0
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
+[resource]
+script = ExtResource("2_ag8et")
+required_stats = Array[ExtResource("1_jgwmr")]([SubResource("Resource_e5kb4"), SubResource("Resource_ko5bj"), SubResource("Resource_unhl3")])
+metadata/_custom_type_script = "uid://b4etl4b5t3ytb"
