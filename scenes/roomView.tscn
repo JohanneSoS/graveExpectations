@@ -12,36 +12,38 @@ position = Vector2(960, 540)
 texture = ExtResource("1_hx04i")
 
 [node name="BodyContainer" parent="." unique_id=508312917 instance=ExtResource("2_l20nl")]
-position = Vector2(1626.0001, 364.00006)
+position = Vector2(1634.0001, 470.00012)
 scale = Vector2(1, 1)
 
 [node name="bodyPart" parent="." unique_id=1694615725 instance=ExtResource("2_f5tvm")]
-position = Vector2(357, 475)
+position = Vector2(564, 489.00003)
+rotation = 2.2776546
 
 [node name="BodyContainer2" parent="." unique_id=1211742952 instance=ExtResource("2_l20nl")]
-position = Vector2(1546.0001, 412.00006)
+position = Vector2(1476.0001, 560.00006)
 scale = Vector2(1.1, 2.2)
 
 [node name="BodyContainer3" parent="." unique_id=1159177782 instance=ExtResource("2_l20nl")]
-position = Vector2(1376.0001, 550)
+position = Vector2(1282.0001, 705.0001)
 scale = Vector2(0.8, 2.4)
 
 [node name="BodyContainer4" parent="." unique_id=1288656875 instance=ExtResource("2_l20nl")]
-position = Vector2(1434, 612.0001)
+position = Vector2(1345.0001, 763.0001)
 scale = Vector2(0.8, 2.4)
 
 [node name="ScalingTest" type="Sprite2D" parent="." unique_id=622557399]
+visible = false
 modulate = Color(1, 1, 1, 0.1764706)
 position = Vector2(1432.7369, 586.13696)
 scale = Vector2(1.4981773, 1.4981776)
 texture = ExtResource("4_l20nl")
 
 [node name="BodyContainer5" parent="." unique_id=1416203762 instance=ExtResource("2_l20nl")]
-position = Vector2(1494, 392.99997)
+position = Vector2(1368.0001, 519.0001)
 rotation = 0.9599311
 scale = Vector2(0.6, 2)
 
 [node name="BodyContainer6" parent="." unique_id=2130335770 instance=ExtResource("2_l20nl")]
-position = Vector2(1594, 526.00006)
+position = Vector2(1538.9998, 653)
 rotation = 0.61086524
 scale = Vector2(0.6, 2)
