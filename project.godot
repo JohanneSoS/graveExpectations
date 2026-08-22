@@ -23,6 +23,10 @@ StateManager="*uid://c2c7aly0v2p3"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[dotnet]
+
+project/assembly_name="GraveExpectations"
+
 [global_group]
 
 dropable=""
