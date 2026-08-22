@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://4rhlayu05ws3"]
+
+[ext_resource type="Script" uid="uid://byqeccifq0y4l" path="res://scripts/body_container.gd" id="1_750yh"]
+[ext_resource type="PackedScene" uid="uid://c4kl7hr7cgkl0" path="res://scenes/body_part.tscn" id="2_f5tvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnhhf"]
+size = Vector2(128, 128)
+
+[node name="RoomView" type="Node2D" unique_id=1675548103]
+
+[node name="BodyContainer" type="StaticBody2D" parent="." unique_id=1030675088 groups=["dropable"]]
+position = Vector2(120, 120)
+script = ExtResource("1_750yh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyContainer" unique_id=1432665108]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_lnhhf")
+
+[node name="ColorRect" type="ColorRect" parent="BodyContainer" unique_id=1268359272]
+offset_right = 128.0
+offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
+
+[node name="bodyPart" parent="." unique_id=1694615725 instance=ExtResource("2_f5tvm")]
+position = Vector2(877, 441)

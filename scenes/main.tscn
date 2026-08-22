@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://b825n0yuryi0l"]
 
 [ext_resource type="Script" uid="uid://bjyeawktidxee" path="res://scripts/gameManager.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://cam5oxd4wil4w" path="res://art/bg1.png" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://4rhlayu05ws3" path="res://scenes/roomView.tscn" id="3_sugp2"]
 
 [node name="Main" type="Node2D" unique_id=2092360769]
 script = ExtResource("1_o5qli")
+
+[node name="Bg1" type="Sprite2D" parent="." unique_id=773874098]
+position = Vector2(597.57043, 311.12497)
+scale = Vector2(1.197438, 1.197438)
+texture = ExtResource("2_0wfyh")
+
+[node name="RoomView" parent="." unique_id=1675548103 instance=ExtResource("3_sugp2")]
