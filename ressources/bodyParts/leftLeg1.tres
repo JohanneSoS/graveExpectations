@@ -3,7 +3,12 @@
 [ext_resource type="Script" uid="uid://dkqa74lq4tccn" path="res://scripts/bodypart.gd" id="1_2sbjx"]
 [ext_resource type="Script" uid="uid://y1psnwajvs3u" path="res://scripts/stat.gd" id="2_n401b"]
 
+[sub_resource type="Resource" id="Resource_ogq8d"]
+script = ExtResource("2_n401b")
+metadata/_custom_type_script = "uid://y1psnwajvs3u"
+
 [resource]
 script = ExtResource("1_2sbjx")
 body_part_type = 4
+stats = Array[ExtResource("2_n401b")]([SubResource("Resource_ogq8d")])
 metadata/_custom_type_script = "uid://dkqa74lq4tccn"

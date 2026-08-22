@@ -1,21 +1,26 @@
 [gd_scene format=3 uid="uid://4rhlayu05ws3"]
 
-[ext_resource type="Texture2D" uid="uid://bb2oldcv47jmu" path="res://art/bg2.png" id="1_hx04i"]
+[ext_resource type="Script" uid="uid://7yskyptif8ij" path="res://scripts/room_view.gd" id="1_dtbit"]
+[ext_resource type="Texture2D" uid="uid://bb2oldcv47jmu" path="res://art/background/bg2.png" id="1_hx04i"]
 [ext_resource type="PackedScene" uid="uid://c4kl7hr7cgkl0" path="res://scenes/body_part.tscn" id="2_f5tvm"]
 [ext_resource type="PackedScene" uid="uid://bflygaqabcb0k" path="res://scenes/body_container.tscn" id="2_l20nl"]
 [ext_resource type="Texture2D" uid="uid://cm5ejsb7xe3s1" path="res://art/scalingTest.png" id="4_l20nl"]
+[ext_resource type="PackedScene" uid="uid://es8gj88xxhmk" path="res://scenes/spawn_area.tscn" id="5_t4ojw"]
+[ext_resource type="Script" uid="uid://bp7r5q2q868bm" path="res://scripts/level_generator.gd" id="6_ctyo8"]
 
 [node name="RoomView" type="Node2D" unique_id=1675548103]
+script = ExtResource("1_dtbit")
 
 [node name="Bg1" type="Sprite2D" parent="." unique_id=1609024940]
-position = Vector2(960, 540)
+position = Vector2(960, 538)
 texture = ExtResource("1_hx04i")
 
 [node name="BodyContainer" parent="." unique_id=508312917 instance=ExtResource("2_l20nl")]
-position = Vector2(1634.0001, 470.00012)
+position = Vector2(1627, 463)
 scale = Vector2(1, 1)
 
 [node name="bodyPart" parent="." unique_id=1694615725 instance=ExtResource("2_f5tvm")]
+visible = false
 position = Vector2(564, 489.00003)
 rotation = 2.2776546
 
@@ -47,3 +52,35 @@ scale = Vector2(0.6, 2)
 position = Vector2(1538.9998, 653)
 rotation = 0.61086524
 scale = Vector2(0.6, 2)
+
+[node name="HeadSpawnArea" parent="." unique_id=53720593 instance=ExtResource("5_t4ojw")]
+position = Vector2(773.00006, 215.99997)
+rotation = -0.075049154
+body_part_scene = ExtResource("2_f5tvm")
+area_size = Vector2(450, 250)
+
+[node name="LegSpawnArea" parent="." unique_id=204864881 instance=ExtResource("5_t4ojw")]
+position = Vector2(411, 606)
+rotation = -0.7853982
+body_part_type = 4
+body_part_scene = ExtResource("2_f5tvm")
+area_size = Vector2(500, 400)
+
+[node name="TorsoSpawnArea" parent="." unique_id=230004079 instance=ExtResource("5_t4ojw")]
+position = Vector2(659, 848.0001)
+rotation = -0.7853982
+body_part_type = 1
+body_part_scene = ExtResource("2_f5tvm")
+area_size = Vector2(600, 260)
+
+[node name="ArmSpawnArea" parent="." unique_id=1203752601 instance=ExtResource("5_t4ojw")]
+position = Vector2(1217, 154)
+rotation = -0.7853982
+body_part_type = 2
+body_part_scene = ExtResource("2_f5tvm")
+area_size = Vector2(300, 300)
+
+[node name="LevelGenerator" type="Node" parent="." unique_id=415794338 node_paths=PackedStringArray("spawn_areas")]
+script = ExtResource("6_ctyo8")
+spawn_areas = [NodePath("../LegSpawnArea"), NodePath("../TorsoSpawnArea"), NodePath("../HeadSpawnArea"), NodePath("../ArmSpawnArea")]
+metadata/_custom_type_script = "uid://bp7r5q2q868bm"
