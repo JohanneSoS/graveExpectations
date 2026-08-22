@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dur6laqne8x84"]
+
+[ext_resource type="PackedScene" uid="uid://bflygaqabcb0k" path="res://scenes/body_container.tscn" id="1_1syo6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjjsl"]
+size = Vector2(128, 128)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mja50"]
+
+[node name="container" type="Area2D" unique_id=996311936]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=295253239]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_cjjsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=468563658]
+position = Vector2(64, 64)
+texture = SubResource("NoiseTexture2D_mja50")
+
+[node name="BodyContainer" parent="." unique_id=508312917 instance=ExtResource("1_1syo6")]
+visible = false
+scale = Vector2(0.49999997, 0.49999997)

@@ -1,25 +1,47 @@
 [gd_scene format=3 uid="uid://4rhlayu05ws3"]
 
-[ext_resource type="Script" uid="uid://byqeccifq0y4l" path="res://scripts/body_container.gd" id="1_750yh"]
+[ext_resource type="Texture2D" uid="uid://bb2oldcv47jmu" path="res://art/bg2.png" id="1_hx04i"]
 [ext_resource type="PackedScene" uid="uid://c4kl7hr7cgkl0" path="res://scenes/body_part.tscn" id="2_f5tvm"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnhhf"]
-size = Vector2(128, 128)
+[ext_resource type="PackedScene" uid="uid://bflygaqabcb0k" path="res://scenes/body_container.tscn" id="2_l20nl"]
+[ext_resource type="Texture2D" uid="uid://cm5ejsb7xe3s1" path="res://art/scalingTest.png" id="4_l20nl"]
 
 [node name="RoomView" type="Node2D" unique_id=1675548103]
 
-[node name="BodyContainer" type="StaticBody2D" parent="." unique_id=1030675088 groups=["dropable"]]
-position = Vector2(120, 120)
-script = ExtResource("1_750yh")
+[node name="Bg1" type="Sprite2D" parent="." unique_id=1609024940]
+position = Vector2(960, 540)
+texture = ExtResource("1_hx04i")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyContainer" unique_id=1432665108]
-position = Vector2(64, 64)
-shape = SubResource("RectangleShape2D_lnhhf")
-
-[node name="ColorRect" type="ColorRect" parent="BodyContainer" unique_id=1268359272]
-offset_right = 128.0
-offset_bottom = 128.0
-metadata/_edit_use_anchors_ = true
+[node name="BodyContainer" parent="." unique_id=508312917 instance=ExtResource("2_l20nl")]
+position = Vector2(1626.0001, 364.00006)
+scale = Vector2(1, 1)
 
 [node name="bodyPart" parent="." unique_id=1694615725 instance=ExtResource("2_f5tvm")]
-position = Vector2(877, 441)
+position = Vector2(357, 475)
+
+[node name="BodyContainer2" parent="." unique_id=1211742952 instance=ExtResource("2_l20nl")]
+position = Vector2(1546.0001, 412.00006)
+scale = Vector2(1.1, 2.2)
+
+[node name="BodyContainer3" parent="." unique_id=1159177782 instance=ExtResource("2_l20nl")]
+position = Vector2(1376.0001, 550)
+scale = Vector2(0.8, 2.4)
+
+[node name="BodyContainer4" parent="." unique_id=1288656875 instance=ExtResource("2_l20nl")]
+position = Vector2(1434, 612.0001)
+scale = Vector2(0.8, 2.4)
+
+[node name="ScalingTest" type="Sprite2D" parent="." unique_id=622557399]
+modulate = Color(1, 1, 1, 0.1764706)
+position = Vector2(1432.7369, 586.13696)
+scale = Vector2(1.4981773, 1.4981776)
+texture = ExtResource("4_l20nl")
+
+[node name="BodyContainer5" parent="." unique_id=1416203762 instance=ExtResource("2_l20nl")]
+position = Vector2(1494, 392.99997)
+rotation = 0.9599311
+scale = Vector2(0.6, 2)
+
+[node name="BodyContainer6" parent="." unique_id=2130335770 instance=ExtResource("2_l20nl")]
+position = Vector2(1594, 526.00006)
+rotation = 0.61086524
+scale = Vector2(0.6, 2)
