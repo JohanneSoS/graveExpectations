@@ -15,8 +15,8 @@
 
 [node name="AudioManager" type="Node2D" unique_id=1914543587]
 script = ExtResource("1_8qd8g")
-full_music = ExtResource("2_if78k")
-radio_music = ExtResource("3_8igv3")
+full_music = ExtResource("3_8igv3")
+radio_music = ExtResource("2_if78k")
 office_ambience = ExtResource("4_2y2jw")
 workroom_ambience = ExtResource("5_2y5yn")
 bone_crackle = Array[AudioStream]([ExtResource("6_oucy0"), ExtResource("7_cuol6"), ExtResource("8_m1k83")])

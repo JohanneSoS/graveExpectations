@@ -8,10 +8,11 @@ func _ready():
 	GameStatManager.reset_level_stats()
 	GameStatManager.current_order = current_data.order
 	level_generator.generate_level()
+	AudioManager.on_location_switch(GameEnums.ActiveScreens.Work)
 
 func _on_finish_level_pressed() -> void:
 	var required_parts = 5
-	var placed_parts := GameStatManager.current_body_parts.size()
+	var placed_parts :int = GameStatManager.current_body_parts.size()
 	
 	if placed_parts < required_parts:
 		print("Cannot finish level: ", placed_parts, "/", required_parts, " body parts placed.")

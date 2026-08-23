@@ -39,20 +39,20 @@ func initialize_streams():
 func on_location_switch(screen: GameEnums.ActiveScreens):
 	match screen: 
 		GameEnums.ActiveScreens.Work:
-			work_ambience_player.volume_db = 1.0
-			office_ambience_player.volume_db = 0.0
-			radio_music_player.volume_db = 1.0
-			full_music_player.volume_db = 0.0
-		GameEnums.ActiveScreens.Office:
 			work_ambience_player.volume_db = 0.0
-			office_ambience_player.volume_db = 1.0
-			radio_music_player.volume_db = 0.3
-			full_music_player.volume_db = 0.0
-		GameEnums.ActiveScreens.Menu:
-			work_ambience_player.volume_db = 0.0
-			office_ambience_player.volume_db = 1.0
+			office_ambience_player.volume_db = -80.0
 			radio_music_player.volume_db = 0.0
-			full_music_player.volume_db = 1.0
+			full_music_player.volume_db = -80.0
+		GameEnums.ActiveScreens.Office:
+			work_ambience_player.volume_db = -80.0
+			office_ambience_player.volume_db = 0.0
+			radio_music_player.volume_db = -20
+			full_music_player.volume_db = -80.0
+		GameEnums.ActiveScreens.Menu:
+			work_ambience_player.volume_db = -80.0
+			office_ambience_player.volume_db = 0.0
+			radio_music_player.volume_db = -80.0
+			full_music_player.volume_db = 0.0
 
 func play_pitch_randomized_OneShot(oneshot: AudioStream):
 	#randomize()
