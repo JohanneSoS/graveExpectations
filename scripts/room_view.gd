@@ -15,7 +15,7 @@ func _on_finish_level_pressed() -> void:
 		get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
 	else:
 		GameState.advance_level()
-		get_tree().change_scene_to_file("res://scenes/boss_room.tscn") # beim neuladen wird die level-data aktualisiert mit dem nächsten level
+		get_tree().change_scene_to_file("res://scenes/evaluation.tscn")
 
 func _evaluate_level():
 	# hier bitte die score logik einbinden

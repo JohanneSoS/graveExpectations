@@ -8,6 +8,9 @@ var current_body_parts: Array[BodyPart] = []
 var current_order: Order
 @export var current_average_stats: Array[Stat] = []
 
+var last_final_score: float = 0.0
+var last_stat_scores: Dictionary = {}
+
 func update_current_body_stats():
 	var body_stats: Dictionary = calculate_body_stats(current_body_parts)
 	current_average_stats = _dict_to_stat_array(body_stats)
@@ -17,6 +20,10 @@ func deliver_body():
 	var body_stats: Dictionary = calculate_body_stats(current_body_parts)
 	var stat_scores: Dictionary = calculate_stat_scores(body_stats, current_order)
 	var final_score: float = calculate_stat_scores_average(stat_scores)
+	
+	last_final_score = final_score
+	last_stat_scores = stat_scores
+	
 	delivery_result.emit(final_score, stat_scores)
 
 func calculate_body_stats(body_parts: Array[BodyPart]) -> Dictionary:
