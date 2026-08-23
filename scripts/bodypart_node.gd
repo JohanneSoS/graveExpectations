@@ -1,6 +1,7 @@
 class_name BodyPart_Node
 extends Node2D
 
+var current_socket:DropSocket = null
 var draggable = false
 var is_inside_dropable = false
 var body_ref
@@ -25,6 +26,12 @@ func _process(delta):
 			initialRot = global_rotation
 			offset = get_global_mouse_position() - global_position
 			StateManager.is_dragging = true
+			
+			if current_socket:
+				current_socket.clear_part()
+				GameStatManager.current_body_parts.erase(body_part_data)
+				GameStatManager.update_current_body_stats()
+				current_socket = null
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
@@ -33,6 +40,11 @@ func _process(delta):
 			if is_inside_dropable:
 				tween.tween_property(self, "global_position", body_ref.global_position,0.2).set_ease(Tween.EASE_OUT)
 				tween.tween_property(self, "global_rotation", body_ref.global_rotation,0.2).set_ease(Tween.EASE_OUT)
+				
+				current_socket = body_ref
+				current_socket.assign_part(self)
+				GameStatManager.current_body_parts.append(body_part_data)
+				GameStatManager.update_current_body_stats()
 			else:
 				tween.tween_property(self,"global_position", initialPos, 0.2).set_ease(Tween.EASE_OUT)
 				tween.tween_property(self,"global_rotation", initialRot, 0.2).set_ease(Tween.EASE_OUT)

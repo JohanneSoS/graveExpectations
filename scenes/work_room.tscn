@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://es8gj88xxhmk" path="res://scenes/spawn_area.tscn" id="6_5v8u3"]
 [ext_resource type="Script" uid="uid://bp7r5q2q868bm" path="res://scripts/level_generator.gd" id="7_8v41e"]
 [ext_resource type="PackedScene" uid="uid://cc837dfaugoxw" path="res://scenes/body_part_tooltip.tscn" id="8_dftxa"]
+[ext_resource type="PackedScene" uid="uid://crcn08j0ewkfp" path="res://scenes/stats_panel.tscn" id="9_gtmpp"]
+[ext_resource type="PackedScene" uid="uid://bhcnfcxrp4rk0" path="res://scenes/stat_row.tscn" id="10_tvpdd"]
 
 [node name="RoomView" type="Node2D" unique_id=1675548103]
 script = ExtResource("1_a2st2")
@@ -93,11 +95,16 @@ offset_left = 1733.0
 offset_top = 1049.0
 offset_right = 1920.0
 offset_bottom = 1089.0
-grow_horizontal = 0
-grow_vertical = 0
 text = "All done! Delivery time!"
 
 [node name="BodyPartTooltip" parent="UI" unique_id=27072615 groups=["body_part_tooltip"] instance=ExtResource("8_dftxa")]
 visible = false
+
+[node name="StatsPanel" parent="UI" unique_id=1637183519 instance=ExtResource("9_gtmpp")]
+offset_left = 1510.0
+offset_top = 37.0
+offset_right = 1899.0
+offset_bottom = 372.0
+stat_row_scene = ExtResource("10_tvpdd")
 
 [connection signal="pressed" from="UI/FinishLevel" to="." method="_on_finish_level_pressed"]

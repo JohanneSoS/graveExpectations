@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bhcnfcxrp4rk0"]
+
+[ext_resource type="Script" uid="uid://dp88aquick3tc" path="res://scripts/stat_row.gd" id="1_bkqit"]
+
+[node name="StatRow" type="HBoxContainer" unique_id=1971243676]
+script = ExtResource("1_bkqit")
+
+[node name="NameLabel" type="Label" parent="." unique_id=491045900]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2003806793]
+layout_mode = 2
+
+[node name="ValueLabel" type="Label" parent="." unique_id=24295769]
+layout_mode = 2

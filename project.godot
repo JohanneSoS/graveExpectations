@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 StateManager="*uid://c2c7aly0v2p3"
 GameState="*uid://bqpnjxibx53m7"
 DialogueManager="*uid://c3rodes2l3gxb"
+GameStatManager="*uid://bjyeawktidxee"
 
 [dialogue_manager]
 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://crcn08j0ewkfp"]
+
+[ext_resource type="Script" uid="uid://d06apykp5biey" path="res://scripts/stats_panel.gd" id="1_frm2s"]
+
+[node name="StatsPanel" type="Control" unique_id=78179398]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_frm2s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2041979738]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
