@@ -2,10 +2,12 @@
 
 [ext_resource type="Resource" uid="uid://dttaxp83ainud" path="res://dialouge/level_1_dialouge.dialogue" id="1_okmm7"]
 [ext_resource type="Resource" uid="uid://de001topx24x8" path="res://ressources/orders/level_1_order.tres" id="1_timbg"]
+[ext_resource type="Resource" uid="uid://cyyfb1f80gbuf" path="res://dialouge/level_1_brief.dialogue" id="1_wgaqj"]
 [ext_resource type="Script" uid="uid://ccqbxwkh32yc6" path="res://scripts/level_data.gd" id="1_wq4qq"]
 
 [resource]
 script = ExtResource("1_wq4qq")
 order = ExtResource("1_timbg")
 dialogue = ExtResource("1_okmm7")
+brief = ExtResource("1_wgaqj")
 metadata/_custom_type_script = "uid://ccqbxwkh32yc6"

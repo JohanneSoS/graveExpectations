@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://crcn08j0ewkfp" path="res://scenes/stats_panel.tscn" id="9_gtmpp"]
 [ext_resource type="PackedScene" uid="uid://bhcnfcxrp4rk0" path="res://scenes/stat_row.tscn" id="10_tvpdd"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2sbjx"]
+
 [node name="RoomView" type="Node2D" unique_id=1675548103]
 script = ExtResource("1_a2st2")
 
@@ -32,11 +34,11 @@ position = Vector2(1476.0001, 560.00006)
 scale = Vector2(1.1, 2.2)
 
 [node name="BodyContainer3" parent="." unique_id=1159177782 instance=ExtResource("3_tvpdd")]
-position = Vector2(1282.0001, 705.0001)
+position = Vector2(1269, 713)
 scale = Vector2(0.8, 2.4)
 
 [node name="BodyContainer4" parent="." unique_id=1288656875 instance=ExtResource("3_tvpdd")]
-position = Vector2(1345.0001, 763.0001)
+position = Vector2(1343, 780)
 scale = Vector2(0.8, 2.4)
 
 [node name="ScalingTest" type="Sprite2D" parent="." unique_id=622557399]
@@ -61,7 +63,7 @@ position = Vector2(750.9999, 216.00002)
 rotation = -0.075049154
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(350, 180)
-part_scale = null
+part_scale = 0.5
 
 [node name="LegSpawnArea" parent="." unique_id=204864881 instance=ExtResource("6_5v8u3")]
 position = Vector2(390.00006, 595.00006)
@@ -69,7 +71,7 @@ rotation = -0.7853982
 body_part_type = 4
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(450, 300)
-part_scale = null
+part_scale = 0.5
 
 [node name="TorsoSpawnArea" parent="." unique_id=230004079 instance=ExtResource("6_5v8u3")]
 position = Vector2(659, 848.0001)
@@ -77,7 +79,7 @@ rotation = -0.7853982
 body_part_type = 1
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(520, 220)
-part_scale = null
+part_scale = 0.5
 
 [node name="ArmSpawnArea" parent="." unique_id=1203752601 instance=ExtResource("6_5v8u3")]
 position = Vector2(1217, 154)
@@ -85,7 +87,7 @@ rotation = -0.7853982
 body_part_type = 2
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(250, 250)
-part_scale = null
+part_scale = 0.5
 
 [node name="LevelGenerator" type="Node" parent="." unique_id=415794338 node_paths=PackedStringArray("spawn_areas")]
 script = ExtResource("7_8v41e")
@@ -94,12 +96,40 @@ metadata/_custom_type_script = "uid://bp7r5q2q868bm"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1930392888]
 
-[node name="FinishLevel" type="Button" parent="UI" unique_id=498484928]
-offset_left = 1733.0
-offset_top = 1049.0
-offset_right = 1920.0
-offset_bottom = 1089.0
+[node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1779321073]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -154.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2sbjx")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer" unique_id=158495526]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer/MarginContainer" unique_id=1604785485]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="FinishLevel" type="Button" parent="UI/PanelContainer/MarginContainer/VBoxContainer" unique_id=498484928]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "All done! Delivery time!"
+
+[node name="HelpButon" type="Button" parent="UI/PanelContainer/MarginContainer/VBoxContainer" unique_id=1289556258]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "What was the brief again?
+"
 
 [node name="BodyPartTooltip" parent="UI" unique_id=27072615 groups=["body_part_tooltip"] instance=ExtResource("8_dftxa")]
 visible = false
@@ -111,4 +141,5 @@ offset_right = 1899.0
 offset_bottom = 372.0
 stat_row_scene = ExtResource("10_tvpdd")
 
-[connection signal="pressed" from="UI/FinishLevel" to="." method="_on_finish_level_pressed"]
+[connection signal="pressed" from="UI/PanelContainer/MarginContainer/VBoxContainer/FinishLevel" to="." method="_on_finish_level_pressed"]
+[connection signal="pressed" from="UI/PanelContainer/MarginContainer/VBoxContainer/HelpButon" to="." method="_on_help_buton_pressed"]

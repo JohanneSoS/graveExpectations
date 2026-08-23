@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bcirg6biximen"]
 
 [ext_resource type="Resource" uid="uid://dpbyd4c3f67hy" path="res://ressources/orders/level_5_order.tres" id="1_4q4qn"]
+[ext_resource type="Resource" uid="uid://bxguvc20pvbqm" path="res://dialouge/level_5_brief.dialogue" id="1_58n4e"]
 [ext_resource type="Resource" uid="uid://ck8vekgvaacfk" path="res://dialouge/level_5_dialogue.dialogue" id="1_hwhk6"]
 [ext_resource type="Script" uid="uid://ccqbxwkh32yc6" path="res://scripts/level_data.gd" id="2_hwhk6"]
 
@@ -8,4 +9,5 @@
 script = ExtResource("2_hwhk6")
 order = ExtResource("1_4q4qn")
 dialogue = ExtResource("1_hwhk6")
+brief = ExtResource("1_58n4e")
 metadata/_custom_type_script = "uid://ccqbxwkh32yc6"

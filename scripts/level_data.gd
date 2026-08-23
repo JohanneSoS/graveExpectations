@@ -3,3 +3,4 @@ extends Resource
 
 @export var order: Order
 @export var dialogue: DialogueResource
+@export var brief: DialogueResource

@@ -20,3 +20,8 @@ func _on_finish_level_pressed() -> void:
 func _evaluate_level():
 	# hier bitte die score logik einbinden
 	pass
+
+
+func _on_help_buton_pressed() -> void:
+	var current_data: LevelData = GameState.get_current_level()
+	DialogueManager.show_dialogue_balloon(current_data.brief, "start")
