@@ -7,12 +7,17 @@ var body_ref
 var offset: Vector2
 var initialPos: Vector2
 var initialRot: float
-
+const COLLISION_MARGIN = 8.0
 
 @export var body_part_data: BodyPart
+@onready var sprite = $Sprite2D
+@onready var collision_shape = $Area2D/CollisionShape2D
+
 
 # Gameplay Bahaviour
-
+func _ready():
+	update_collision_shape()
+	
 func _process(delta):
 	if draggable:
 		if Input.is_action_just_pressed("click"):
@@ -36,11 +41,22 @@ func _on_area_2d_mouse_entered():
 	if not StateManager.is_dragging:
 		draggable = true
 		scale = Vector2(1.05, 1.05)
+		
+		if body_part_data == null:
+			return
+		
+		var tooltip = get_tree().get_first_node_in_group("body_part_tooltip")
+		if tooltip:
+			tooltip.show_body_part(body_part_data)
 
 func _on_area_2d_mouse_exited():
 	if not StateManager.is_dragging:
 		draggable = false
 		scale = Vector2(1, 1)
+	
+	var tooltip = get_tree().get_first_node_in_group("body_part_tooltip")
+	if tooltip:
+		tooltip.hide()
 
 
 func _on_area_2d_body_entered(body: Node2D):
@@ -55,3 +71,16 @@ func _on_area_2d_body_exited(body: Node2D):
 		is_inside_dropable = false
 		body.modulate = Color(Color.AQUA, 0.5)
 		body_ref = body
+
+func update_collision_shape():
+	if sprite.texture == null:
+		return
+
+	var texture_size = sprite.texture.get_size()
+	var sprite_size = texture_size * sprite.scale
+
+	var shape := RectangleShape2D.new()
+	shape.size = sprite_size + Vector2( COLLISION_MARGIN * 2.0, COLLISION_MARGIN * 2.0)
+	
+	collision_shape.shape = shape
+	

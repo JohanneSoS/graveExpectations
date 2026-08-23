@@ -14,7 +14,18 @@ func generate_level():
 			slots.append({"area": area, "stats": stat_array})
 
 	for req in order.required_stats:
-		var pool = slots.duplicate()
+		# var pool = slots.duplicate()
+		var pool = []
+		
+		for slot in slots:
+			var already_has_stat := false
+			for existing_stat in slot["stats"]:
+				if existing_stat.stat == req.stat:
+					already_has_stat = true
+					break
+			if not already_has_stat:
+				pool.append(slot)
+				
 		pool.shuffle()
 		var contributor_count = randi_range(1, pool.size())
 		pool = pool.slice(0, contributor_count)
@@ -49,21 +60,35 @@ func _split_value(total: float, count: int) -> Array[float]:
 func _build_solution_part(required_contribs: Array[Stat], part_type: GameEnums.BodyPartType) -> BodyPart:
 	var part = BodyPart.new()
 	part.body_part_type = part_type
-	part.stats = required_contribs.duplicate(true)
+	
+	var used_types = []
+	for required_stats in required_contribs:
+		if required_stats.stat in used_types:
+			continue
+		
+		part.stats.append(required_stats.duplicate(true))
+		used_types.append(required_stats.stat)
+	# part.stats = required_contribs.duplicate(true)
 
 	var target_count = randi_range(min_stats_per_part, max_stats_per_part)
-	var used_types: Array = required_contribs.map(func(s): return s.stat)
-
+	
 	while part.stats.size() < target_count:
-		var t = GameEnums.PersonalityStat.values().pick_random()
-		if t in used_types:
-			continue
-		var filler = Stat.new()
+		var available_types = []
+		
+		for stat_type in GameEnums.PersonalityStat.values():
+			if stat_type not in used_types:
+				available_types.append(stat_type)
+				
+		if available_types.is_empty():
+			break
+			
+		var t = available_types.pick_random()
+		var filler := Stat.new()
 		filler.stat = t
 		filler.value = randf_range(0.0, 100.0)
+		
 		part.stats.append(filler)
 		used_types.append(t)
-
 	return part
 
 func check_order_fulfilled(assembled_parts: Array[BodyPart]) -> bool:

@@ -53,6 +53,7 @@ func _spawn_instance(part: BodyPart, local_pos: Vector2):
 	if texture:
 		var sprite = instance.get_node("Sprite2D")
 		sprite.texture = texture
+		instance.update_collision_shape()
 
 func _get_random_texture() -> Texture2D:
 	var folder := _get_texture_folder()

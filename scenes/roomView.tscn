@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cm5ejsb7xe3s1" path="res://art/scalingTest.png" id="4_l20nl"]
 [ext_resource type="PackedScene" uid="uid://es8gj88xxhmk" path="res://scenes/spawn_area.tscn" id="5_t4ojw"]
 [ext_resource type="Script" uid="uid://bp7r5q2q868bm" path="res://scripts/level_generator.gd" id="6_ctyo8"]
+[ext_resource type="PackedScene" uid="uid://cc837dfaugoxw" path="res://scenes/body_part_tooltip.tscn" id="8_dtbit"]
 
 [node name="RoomView" type="Node2D" unique_id=1675548103]
 script = ExtResource("1_dtbit")
@@ -84,3 +85,7 @@ area_size = Vector2(300, 300)
 script = ExtResource("6_ctyo8")
 spawn_areas = [NodePath("../LegSpawnArea"), NodePath("../TorsoSpawnArea"), NodePath("../HeadSpawnArea"), NodePath("../ArmSpawnArea")]
 metadata/_custom_type_script = "uid://bp7r5q2q868bm"
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1930392888]
+
+[node name="BodyPartTooltip" parent="UI" unique_id=27072615 groups=["body_part_tooltip"] instance=ExtResource("8_dtbit")]
