@@ -1,10 +1,14 @@
 extends Control
 
-@onready var score_label: Label = $ScoreLabel
-@onready var accuracy_label: Label = $AccuracyLabel
-@onready var continue_button: Button = $ContinueButton
+@onready var score_label: Label = $UI/VBoxContainer/ScoreLabel
+@onready var accuracy_label: Label = $UI/VBoxContainer/AccuracyLabel
+@onready var continue_button: Button = $UI/VBoxContainer/ContinueButton
 
-var good_dialogue = "res://dialouge/good_result.dialogue"
+const RESULT_DIALOGUES := {
+	"very_good": "res://dialouge/very_good_result.dialogue",
+	"good": "res://dialouge/good_result.dialogue",
+	"bad": "res://dialouge/bad_result.dialogue",
+}
 
 func _ready() -> void:
 	var final_score := GameStatManager.last_final_score
@@ -20,19 +24,20 @@ func _show_result(final_score: float, stat_scores: Dictionary) -> void:
 		accuracy_label.text = "Good!"
 	else:
 		accuracy_label.text = "Bad..."
-		
+
 	_play_result_dialogue(final_score)
 
 func _play_result_dialogue(final_score: float) -> void:
+	var path: String
 	if final_score >= 80.0:
-		# Very good dialogue
-		DialogueManager.play_dialogue("very_good")
+		path = RESULT_DIALOGUES["very_good"]
 	elif final_score >= 60.0:
-		pass
-		# dialogue add
+		path = RESULT_DIALOGUES["good"]
 	else:
-		pass
-		# add dialogue
+		path = RESULT_DIALOGUES["bad"]
+
+	var resource: DialogueResource = load(path)
+	DialogueManager.show_dialogue_balloon(resource, "start")
 
 func _on_continue_button_pressed() -> void:
 	if GameState.is_last_level():

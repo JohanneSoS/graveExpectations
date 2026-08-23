@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cljrmglahosh0"
+path="res://.godot/imported/bad_result.dialogue-2c32290621b2d1d770cd8deda552b199.tres"
+
+[deps]
+
+source_file="res://dialouge/bad_result.dialogue"
+dest_files=["res://.godot/imported/bad_result.dialogue-2c32290621b2d1d770cd8deda552b199.tres"]
+
+[params]
+
+defaults=true

@@ -45,3 +45,5 @@ theme_override_font_sizes/font_size = 30
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Continue"
+
+[connection signal="pressed" from="UI/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
