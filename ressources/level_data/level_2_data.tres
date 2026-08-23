@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bi36jaokjhcm4"]
 
+[ext_resource type="Resource" uid="uid://dimbfomx6pbmm" path="res://dialouge/level_2_dialogue.dialogue" id="1_mplb0"]
 [ext_resource type="Resource" uid="uid://b362lk2b1o6lf" path="res://ressources/orders/level_2_order.tres" id="1_t5a1q"]
 [ext_resource type="Script" uid="uid://ccqbxwkh32yc6" path="res://scripts/level_data.gd" id="2_mplb0"]
 
 [resource]
 script = ExtResource("2_mplb0")
 order = ExtResource("1_t5a1q")
+dialogue = ExtResource("1_mplb0")
 metadata/_custom_type_script = "uid://ccqbxwkh32yc6"

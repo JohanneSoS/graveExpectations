@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://ccqbxwkh32yc6" path="res://scripts/level_data.gd" id="2_jy5aj"]
 [ext_resource type="Resource" uid="uid://covdxhhfs0p3n" path="res://ressources/level_data/level_1_data.tres" id="3_a1qx6"]
 [ext_resource type="Resource" uid="uid://bi36jaokjhcm4" path="res://ressources/level_data/level_2_data.tres" id="4_gu6ud"]
+[ext_resource type="Resource" uid="uid://kbgdrvfn1fy1" path="res://ressources/level_data/level_3_data.tres" id="5_q5byu"]
+[ext_resource type="Resource" uid="uid://dgvqosi5prsrj" path="res://ressources/level_data/level_4_data.tres" id="6_vsyf1"]
+[ext_resource type="Resource" uid="uid://bcirg6biximen" path="res://ressources/level_data/level_5_data.tres" id="7_3oy0g"]
 
 [node name="GameState" type="Node" unique_id=866184086]
 script = ExtResource("1_321hb")
-levels = Array[ExtResource("2_jy5aj")]([ExtResource("3_a1qx6"), ExtResource("4_gu6ud")])
+levels = Array[ExtResource("2_jy5aj")]([ExtResource("3_a1qx6"), ExtResource("4_gu6ud"), ExtResource("5_q5byu"), ExtResource("6_vsyf1"), ExtResource("7_3oy0g")])

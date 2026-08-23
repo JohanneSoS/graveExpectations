@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b825n0yuryi0l"]
+
+[ext_resource type="Script" uid="uid://bidx383wno1tq" path="res://scripts/boss_room.gd" id="1_3n20u"]
+[ext_resource type="Texture2D" uid="uid://h00b72eh8w1d" path="res://art/background/Background_Scene_1.png" id="2_bpcqn"]
+
+[node name="BossRoom" type="Node2D" unique_id=2092360769]
+script = ExtResource("1_3n20u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=535431572]
+offset_right = 1920.0
+offset_bottom = 1132.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_bpcqn")

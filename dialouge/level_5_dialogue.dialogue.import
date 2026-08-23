@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://ck8vekgvaacfk"
+path="res://.godot/imported/level_5_dialogue.dialogue-255a3f2de6bb0c89357dc134fc9efef0.tres"
+
+[deps]
+
+source_file="res://dialouge/level_5_dialogue.dialogue"
+dest_files=["res://.godot/imported/level_5_dialogue.dialogue-255a3f2de6bb0c89357dc134fc9efef0.tres"]
+
+[params]
+
+defaults=true
