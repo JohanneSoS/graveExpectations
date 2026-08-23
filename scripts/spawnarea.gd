@@ -14,6 +14,7 @@ extends Node2D
 @export var min_distance: float = 80.0
 @export var max_tilt_degrees: float = 15.0
 @export var max_attempts: int = 30
+@export var part_scale: float = 0.5
 
 const BODY_PART_TEXTURE_ROOT = "res://art/bodyparts"
 var _texture_cache = {}
@@ -46,6 +47,7 @@ func _spawn_instance(part: BodyPart, local_pos: Vector2):
 	var instance: BodyPart_Node = body_part_scene.instantiate()
 	add_child(instance)
 	instance.position = local_pos
+	instance.scale = Vector2.ONE * part_scale
 	instance.rotation = deg_to_rad(randf_range(-max_tilt_degrees, max_tilt_degrees))
 	instance.body_part_data = part
 
@@ -140,3 +142,14 @@ func _get_valid_local_position(existing: Array[Vector2]) -> Vector2:
 		if valid:
 			return candidate
 	return candidate
+
+func get_random_free_position() -> Vector2:
+	var existing_positions: Array[Vector2] = []
+
+	for child in get_children():
+		if child is BodyPart_Node and child != null:
+			existing_positions.append(child.position)
+
+	var local_position := _get_valid_local_position(existing_positions)
+
+	return to_global(local_position)

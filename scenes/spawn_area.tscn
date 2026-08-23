@@ -4,3 +4,4 @@
 
 [node name="SpawnArea" type="Node2D" unique_id=53720593]
 script = ExtResource("1_au4v6")
+part_scale = null

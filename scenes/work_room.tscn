@@ -57,31 +57,35 @@ rotation = 0.61086524
 scale = Vector2(0.6, 2)
 
 [node name="HeadSpawnArea" parent="." unique_id=53720593 instance=ExtResource("6_5v8u3")]
-position = Vector2(773.00006, 215.99997)
+position = Vector2(750.9999, 216.00002)
 rotation = -0.075049154
 body_part_scene = ExtResource("4_l3jv6")
-area_size = Vector2(450, 250)
+area_size = Vector2(350, 180)
+part_scale = null
 
 [node name="LegSpawnArea" parent="." unique_id=204864881 instance=ExtResource("6_5v8u3")]
-position = Vector2(411, 606)
+position = Vector2(390.00006, 595.00006)
 rotation = -0.7853982
 body_part_type = 4
 body_part_scene = ExtResource("4_l3jv6")
-area_size = Vector2(500, 400)
+area_size = Vector2(450, 300)
+part_scale = null
 
 [node name="TorsoSpawnArea" parent="." unique_id=230004079 instance=ExtResource("6_5v8u3")]
 position = Vector2(659, 848.0001)
 rotation = -0.7853982
 body_part_type = 1
 body_part_scene = ExtResource("4_l3jv6")
-area_size = Vector2(600, 260)
+area_size = Vector2(520, 220)
+part_scale = null
 
 [node name="ArmSpawnArea" parent="." unique_id=1203752601 instance=ExtResource("6_5v8u3")]
 position = Vector2(1217, 154)
 rotation = -0.7853982
 body_part_type = 2
 body_part_scene = ExtResource("4_l3jv6")
-area_size = Vector2(300, 300)
+area_size = Vector2(250, 250)
+part_scale = null
 
 [node name="LevelGenerator" type="Node" parent="." unique_id=415794338 node_paths=PackedStringArray("spawn_areas")]
 script = ExtResource("7_8v41e")
@@ -101,7 +105,7 @@ text = "All done! Delivery time!"
 visible = false
 
 [node name="StatsPanel" parent="UI" unique_id=1637183519 instance=ExtResource("9_gtmpp")]
-offset_left = 1510.0
+offset_left = 1462.0
 offset_top = 37.0
 offset_right = 1899.0
 offset_bottom = 372.0
