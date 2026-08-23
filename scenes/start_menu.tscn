@@ -60,14 +60,6 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "Start Game"
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer" unique_id=2062243072]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 50
-text = "Show Credits
-"
-
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1276455558]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
