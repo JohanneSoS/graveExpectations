@@ -17,3 +17,9 @@ enum BodyPartType {
 	LEFT_LEG,
 	RIGHT_LEG
 }
+
+enum ActiveScreens {
+	Menu,
+	Office,
+	Work
+}

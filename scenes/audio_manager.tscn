@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d5dianarm0k0"]
 
-[ext_resource type="Script" uid="uid://dracxsm7ttmj6" path="res://scenes/audio_manager.gd" id="1_8qd8g"]
+[ext_resource type="Script" uid="uid://dracxsm7ttmj6" path="res://scripts/audio_manager.gd" id="1_8qd8g"]
 [ext_resource type="AudioStream" uid="uid://chfkycl0rvsvp" path="res://audio/music/love_finds_its_way_v4_radio_loop.wav" id="2_if78k"]
 [ext_resource type="AudioStream" uid="uid://lwi2xx57ivsf" path="res://audio/music/love_finds_its_way_v4_loop.wav" id="3_8igv3"]
 [ext_resource type="AudioStream" uid="uid://dp4ogb7lsgavd" path="res://audio/sfx/office_room.wav" id="4_2y2jw"]
@@ -12,10 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://h2tnr7qifr32" path="res://audio/sfx/mouse_hover.wav" id="10_hssp1"]
 [ext_resource type="AudioStream" uid="uid://br5sinhldabva" path="res://audio/sfx/drag_bodypart.wav" id="11_8b11i"]
 [ext_resource type="AudioStream" uid="uid://dx53q275u03wk" path="res://audio/sfx/drop_bodypart.wav" id="12_u6qdm"]
-
-[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_o7kxr"]
-
-[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_ku0lp"]
 
 [node name="AudioManager" type="Node2D" unique_id=1914543587]
 script = ExtResource("1_8qd8g")
@@ -30,13 +26,10 @@ drag_bodypart = ExtResource("11_8b11i")
 drop_bodypoart = ExtResource("12_u6qdm")
 
 [node name="radioMusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=557406743]
-stream = SubResource("AudioStreamSynchronized_o7kxr")
 
 [node name="fullMusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1739202578]
-stream = SubResource("AudioStreamSynchronized_ku0lp")
 
 [node name="work_ambience" type="AudioStreamPlayer2D" parent="." unique_id=677688357]
-stream = SubResource("AudioStreamSynchronized_ku0lp")
 
 [node name="office_ambience" type="AudioStreamPlayer2D" parent="." unique_id=297573263]
 
