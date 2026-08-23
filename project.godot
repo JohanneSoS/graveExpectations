@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GraveExpectations"
-run/main_scene="uid://b825n0yuryi0l"
+run/main_scene="uid://ytxba1anqd85"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

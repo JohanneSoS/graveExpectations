@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dgvqosi5prsrj"]
+
+[ext_resource type="Resource" uid="uid://clbctcgjnowbf" path="res://ressources/orders/level_4_order.tres" id="1_tleky"]
+[ext_resource type="Script" uid="uid://ccqbxwkh32yc6" path="res://scripts/level_data.gd" id="2_3e6ob"]
+
+[resource]
+script = ExtResource("2_3e6ob")
+order = ExtResource("1_tleky")
+metadata/_custom_type_script = "uid://ccqbxwkh32yc6"
