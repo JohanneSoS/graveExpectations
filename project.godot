@@ -62,7 +62,6 @@ click={
 [internationalization]
 
 locale/translations_pot_files=PackedStringArray("res://dialouge/level_1_dialouge.dialogue", "res://dialouge/level_2_dialogue.dialogue", "res://dialouge/level_3_dialogue.dialogue", "res://dialouge/level_4_dialogue.dialogue", "res://dialouge/level_5_dialogue.dialogue", "res://dialouge/level_1_brief.dialogue", "res://dialouge/level_2_brief.dialogue", "res://dialouge/level_3_brief.dialogue", "res://dialouge/level_4_brief.dialogue", "res://dialouge/level_5_brief.dialogue", "res://dialouge/tutorial_dialogue.dialogue", "res://dialouge/very_good_result.dialogue", "res://dialouge/good_result.dialogue", "res://dialouge/bad_result.dialogue", "res://dialouge/very_bad_result.dialogue")
-<<<<<<<Updatedupstreamlocale/translations_pot_files=PackedStringArray("res://dialouge/level_1_dialouge.dialogue", "res://dialouge/level_2_dialogue.dialogue", "res://dialouge/level_3_dialogue.dialogue", "res://dialouge/level_4_dialogue.dialogue", "res://dialouge/level_5_dialogue.dialogue", "res://dialouge/level_1_brief.dialogue", "res://dialouge/level_2_brief.dialogue", "res://dialouge/level_3_brief.dialogue", "res://dialouge/level_4_brief.dialogue", "res://dialouge/level_5_brief.dialogue", "res://dialouge/tutorial_dialogue.dialogue")
 
 [physics]
 

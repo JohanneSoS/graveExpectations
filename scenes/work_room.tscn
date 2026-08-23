@@ -7,9 +7,48 @@
 [ext_resource type="Texture2D" uid="uid://cm5ejsb7xe3s1" path="res://art/scalingTest.png" id="5_cs4je"]
 [ext_resource type="PackedScene" uid="uid://es8gj88xxhmk" path="res://scenes/spawn_area.tscn" id="6_5v8u3"]
 [ext_resource type="Script" uid="uid://bp7r5q2q868bm" path="res://scripts/level_generator.gd" id="7_8v41e"]
+[ext_resource type="Texture2D" uid="uid://cl6e351a8w3vc" path="res://art/bodyparts/heads/Head_01.png" id="7_e6mdy"]
 [ext_resource type="PackedScene" uid="uid://cc837dfaugoxw" path="res://scenes/body_part_tooltip.tscn" id="8_dftxa"]
+[ext_resource type="Texture2D" uid="uid://b3l2x2txwepr8" path="res://art/bodyparts/heads/Head_02.png" id="8_p3pk1"]
 [ext_resource type="PackedScene" uid="uid://crcn08j0ewkfp" path="res://scenes/stats_panel.tscn" id="9_gtmpp"]
+[ext_resource type="Texture2D" uid="uid://c7jflv4syw56d" path="res://art/bodyparts/heads/Head_03.png" id="9_y57gk"]
+[ext_resource type="Texture2D" uid="uid://ba1w1wfg88dry" path="res://art/bodyparts/heads/Head_04.png" id="10_7yqhb"]
 [ext_resource type="PackedScene" uid="uid://bhcnfcxrp4rk0" path="res://scenes/stat_row.tscn" id="10_tvpdd"]
+[ext_resource type="Texture2D" uid="uid://cufmjikkbhk3q" path="res://art/bodyparts/heads/Head_05.png" id="11_cv6bh"]
+[ext_resource type="Texture2D" uid="uid://r8lglho87yp" path="res://art/bodyparts/heads/Head_06.png" id="12_x61dj"]
+[ext_resource type="Texture2D" uid="uid://0pbgfxa4upx2" path="res://art/bodyparts/heads/Head_07.png" id="13_6s11m"]
+[ext_resource type="Texture2D" uid="uid://d3ewdn5sslnit" path="res://art/bodyparts/heads/Head_08.png" id="14_yfo2c"]
+[ext_resource type="Texture2D" uid="uid://bx7leuyc5ekc0" path="res://art/bodyparts/legs/Leg_01.png" id="15_b3jov"]
+[ext_resource type="Texture2D" uid="uid://cv8cdk7diwsg2" path="res://art/bodyparts/legs/Leg_02.png" id="16_g2grh"]
+[ext_resource type="Texture2D" uid="uid://xo3iclfpaujh" path="res://art/bodyparts/legs/Leg_03.png" id="17_33wcx"]
+[ext_resource type="Texture2D" uid="uid://l0gb4g4yh5at" path="res://art/bodyparts/legs/Leg_04.png" id="18_46u72"]
+[ext_resource type="Texture2D" uid="uid://xcfiegbow2al" path="res://art/bodyparts/legs/Leg_05.png" id="19_2bsfa"]
+[ext_resource type="Texture2D" uid="uid://dxt8mcabmiau8" path="res://art/bodyparts/legs/Leg_06.png" id="20_y1o86"]
+[ext_resource type="Texture2D" uid="uid://co50eshu1n4c1" path="res://art/bodyparts/legs/Leg_07.png" id="21_hvnqa"]
+[ext_resource type="Texture2D" uid="uid://duf5fft8ogf34" path="res://art/bodyparts/legs/Leg_08.png" id="22_6duqq"]
+[ext_resource type="Texture2D" uid="uid://dc80l7oaj8vh2" path="res://art/bodyparts/legs/Leg_09.png" id="23_r0oqt"]
+[ext_resource type="Texture2D" uid="uid://bnxy3p8fyoqac" path="res://art/bodyparts/legs/Leg_10.png" id="24_fdkxn"]
+[ext_resource type="Texture2D" uid="uid://dtajew1io28gi" path="res://art/bodyparts/legs/Leg_11.png" id="25_1ni31"]
+[ext_resource type="Texture2D" uid="uid://6pf1g2hgckhm" path="res://art/bodyparts/legs/Leg_12.png" id="26_pd0s5"]
+[ext_resource type="Texture2D" uid="uid://duohiq6uyxx32" path="res://art/bodyparts/torsos/Torso_01.png" id="27_8eaq4"]
+[ext_resource type="Texture2D" uid="uid://ki8voc6qj4kn" path="res://art/bodyparts/torsos/Torso_02.png" id="28_dglbd"]
+[ext_resource type="Texture2D" uid="uid://h1y732rchf2g" path="res://art/bodyparts/torsos/Torso_03.png" id="29_08u8u"]
+[ext_resource type="Texture2D" uid="uid://br4ih3m72awnj" path="res://art/bodyparts/torsos/Torso_04.png" id="30_rjvqn"]
+[ext_resource type="Texture2D" uid="uid://coi71k5xmc8t1" path="res://art/bodyparts/torsos/Torso_05.png" id="31_d3q7l"]
+[ext_resource type="Texture2D" uid="uid://dkpiamjiuq5rj" path="res://art/bodyparts/torsos/Torso_06.png" id="32_te2oa"]
+[ext_resource type="Texture2D" uid="uid://dghs2o0k5nrsb" path="res://art/bodyparts/torsos/Torso_07.png" id="33_qkd3n"]
+[ext_resource type="Texture2D" uid="uid://o1melqfa7qyf" path="res://art/bodyparts/arms/arm_01.png" id="34_7n8fo"]
+[ext_resource type="Texture2D" uid="uid://chjnsjb2punfe" path="res://art/bodyparts/arms/arm_02.png" id="35_fg4tm"]
+[ext_resource type="Texture2D" uid="uid://dk067w67f7533" path="res://art/bodyparts/arms/arm_03.png" id="36_c4hgc"]
+[ext_resource type="Texture2D" uid="uid://4b0vcxvaqi6l" path="res://art/bodyparts/arms/arm_04.png" id="37_fi1ci"]
+[ext_resource type="Texture2D" uid="uid://kiflitcxei3y" path="res://art/bodyparts/arms/arm_05.png" id="38_rr6lu"]
+[ext_resource type="Texture2D" uid="uid://b8pn45otjnme" path="res://art/bodyparts/arms/arm_06.png" id="39_n6q85"]
+[ext_resource type="Texture2D" uid="uid://bq1gccojncgy6" path="res://art/bodyparts/arms/arm_07.png" id="40_biinx"]
+[ext_resource type="Texture2D" uid="uid://b085bbnajfi18" path="res://art/bodyparts/arms/arm_08.png" id="41_h8s3g"]
+[ext_resource type="Texture2D" uid="uid://bj1echynb2f2" path="res://art/bodyparts/arms/arm_09.png" id="42_iy43u"]
+[ext_resource type="Texture2D" uid="uid://cvc2lm02e2je0" path="res://art/bodyparts/arms/arm_10.png" id="43_w8kx5"]
+[ext_resource type="Texture2D" uid="uid://3dy2am78wj3o" path="res://art/bodyparts/arms/arm_11.png" id="44_p63ug"]
+[ext_resource type="Texture2D" uid="uid://cq7kscfwoes3c" path="res://art/bodyparts/arms/arm_12.png" id="45_oljn7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2sbjx"]
 
@@ -63,7 +102,7 @@ position = Vector2(750.9999, 216.00002)
 rotation = -0.075049154
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(350, 180)
-part_scale = 0.5
+bodypart_textures = Array[Texture2D]([ExtResource("7_e6mdy"), ExtResource("8_p3pk1"), ExtResource("9_y57gk"), ExtResource("10_7yqhb"), ExtResource("11_cv6bh"), ExtResource("12_x61dj"), ExtResource("13_6s11m"), ExtResource("14_yfo2c")])
 
 [node name="LegSpawnArea" parent="." unique_id=204864881 instance=ExtResource("6_5v8u3")]
 position = Vector2(390.00006, 595.00006)
@@ -71,7 +110,7 @@ rotation = -0.7853982
 body_part_type = 4
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(450, 300)
-part_scale = 0.5
+bodypart_textures = Array[Texture2D]([ExtResource("15_b3jov"), ExtResource("16_g2grh"), ExtResource("17_33wcx"), ExtResource("18_46u72"), ExtResource("19_2bsfa"), ExtResource("20_y1o86"), ExtResource("21_hvnqa"), ExtResource("22_6duqq"), ExtResource("23_r0oqt"), ExtResource("24_fdkxn"), ExtResource("25_1ni31"), ExtResource("26_pd0s5")])
 
 [node name="TorsoSpawnArea" parent="." unique_id=230004079 instance=ExtResource("6_5v8u3")]
 position = Vector2(659, 848.0001)
@@ -79,7 +118,7 @@ rotation = -0.7853982
 body_part_type = 1
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(520, 220)
-part_scale = 0.5
+bodypart_textures = Array[Texture2D]([ExtResource("27_8eaq4"), ExtResource("28_dglbd"), ExtResource("29_08u8u"), ExtResource("30_rjvqn"), ExtResource("31_d3q7l"), ExtResource("32_te2oa"), ExtResource("33_qkd3n")])
 
 [node name="ArmSpawnArea" parent="." unique_id=1203752601 instance=ExtResource("6_5v8u3")]
 position = Vector2(1217, 154)
@@ -87,7 +126,7 @@ rotation = -0.7853982
 body_part_type = 2
 body_part_scene = ExtResource("4_l3jv6")
 area_size = Vector2(250, 250)
-part_scale = 0.5
+bodypart_textures = Array[Texture2D]([ExtResource("34_7n8fo"), ExtResource("35_fg4tm"), ExtResource("36_c4hgc"), ExtResource("37_fi1ci"), ExtResource("38_rr6lu"), ExtResource("39_n6q85"), ExtResource("40_biinx"), ExtResource("41_h8s3g"), ExtResource("42_iy43u"), ExtResource("43_w8kx5"), ExtResource("44_p63ug"), ExtResource("45_oljn7")])
 
 [node name="LevelGenerator" type="Node" parent="." unique_id=415794338 node_paths=PackedStringArray("spawn_areas")]
 script = ExtResource("7_8v41e")

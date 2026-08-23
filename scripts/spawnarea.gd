@@ -19,6 +19,8 @@ extends Node2D
 const BODY_PART_TEXTURE_ROOT = "res://art/bodyparts"
 var _texture_cache = {}
 
+@export var bodypart_textures: Array[Texture2D]
+
 func _ready():
 	if Engine.is_editor_hint():
 		return
@@ -58,59 +60,61 @@ func _spawn_instance(part: BodyPart, local_pos: Vector2):
 		instance.update_collision_shape()
 
 func _get_random_texture() -> Texture2D:
-	var folder := _get_texture_folder()
-	if folder.is_empty():
-		return null
-
-	if not _texture_cache.has(folder):
-		_texture_cache[folder] = _load_textures_from_folder(folder)
-	var textures: Array[Texture2D] = _texture_cache[folder]
-	if textures.is_empty():
-		return null
+	#var folder := _get_texture_folder()
+	#if folder.is_empty():
+		#return null
+#
+	#if not _texture_cache.has(folder):
+		#_texture_cache[folder] = _load_textures_from_folder(folder)
+	#var textures: Array[Texture2D] = _texture_cache[folder]
+	#if textures.is_empty():
+		#return null
+		
+	var textures = bodypart_textures
 	return textures.pick_random()
 
 # haben wir links und rechts texturen?
-func _get_texture_folder() -> String:
-	match body_part_type:
-		GameEnums.BodyPartType.LEFT_ARM:
-			return BODY_PART_TEXTURE_ROOT + "/arms"
-		GameEnums.BodyPartType.RIGHT_ARM:
-			return BODY_PART_TEXTURE_ROOT + "/arms"
-		GameEnums.BodyPartType.LEFT_LEG:
-			return BODY_PART_TEXTURE_ROOT + "/legs"
-		GameEnums.BodyPartType.RIGHT_LEG:
-			return BODY_PART_TEXTURE_ROOT + "/legs"
-		GameEnums.BodyPartType.TORSO:
-			return BODY_PART_TEXTURE_ROOT + "/torsos"
-		GameEnums.BodyPartType.HEAD:
-			return BODY_PART_TEXTURE_ROOT + "/heads"
-		_:
-			return ""
-	
-func _load_textures_from_folder(folder: String) -> Array[Texture2D]:
-	var textures: Array[Texture2D] = []
-	var dir := DirAccess.open(folder)
-
-	if dir == null:
-		push_warning("invalid body part folder: " + folder)
-		return textures
-
-	dir.list_dir_begin()
-
-	var file_name := dir.get_next()
-	while file_name != "":
-		if not dir.current_is_dir():
-			var extension := file_name.get_extension().to_lower()
-			if extension in ["png"]:
-				var path := folder + "/" + file_name
-				var texture := ResourceLoader.load(path, "Texture2D") as Texture2D
-				
-				if texture:
-					textures.append(texture)
-					
-		file_name = dir.get_next()
-	dir.list_dir_end()
-	return textures
+#func _get_texture_folder() -> String:
+	#match body_part_type:
+		#GameEnums.BodyPartType.LEFT_ARM:
+			#return BODY_PART_TEXTURE_ROOT + "/arms"
+		#GameEnums.BodyPartType.RIGHT_ARM:
+			#return BODY_PART_TEXTURE_ROOT + "/arms"
+		#GameEnums.BodyPartType.LEFT_LEG:
+			#return BODY_PART_TEXTURE_ROOT + "/legs"
+		#GameEnums.BodyPartType.RIGHT_LEG:
+			#return BODY_PART_TEXTURE_ROOT + "/legs"
+		#GameEnums.BodyPartType.TORSO:
+			#return BODY_PART_TEXTURE_ROOT + "/torsos"
+		#GameEnums.BodyPartType.HEAD:
+			#return BODY_PART_TEXTURE_ROOT + "/heads"
+		#_:
+			#return ""
+	#
+#func _load_textures_from_folder(folder: String) -> Array[Texture2D]:
+	#var textures: Array[Texture2D] = []
+	#var dir := DirAccess.open(folder)
+#
+	#if dir == null:
+		#push_warning("invalid body part folder: " + folder)
+		#return textures
+#
+	#dir.list_dir_begin()
+#
+	#var file_name := dir.get_next()
+	#while file_name != "":
+		#if not dir.current_is_dir():
+			#var extension := file_name.get_extension().to_lower()
+			#if extension in ["png"]:
+				#var path := folder + "/" + file_name
+				#var texture := ResourceLoader.load(path, "Texture2D") as Texture2D
+				#
+				#if texture:
+					#textures.append(texture)
+					#
+		#file_name = dir.get_next()
+	#dir.list_dir_end()
+	#return textures
 	
 func _generate_random_part() -> BodyPart:
 	var part := BodyPart.new()
