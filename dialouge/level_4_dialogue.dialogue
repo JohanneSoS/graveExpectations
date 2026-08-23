@@ -1,4 +1,13 @@
 ~ start
-Boss: WIP
+Boss: Morning, kid. 
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Ready for your next request?
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Even if you weren't I wouldn't care, so here it comes.
+Client: “To whom it may concern at Grave Expectations Dating Inc.,\nmy neighbour told me about your work, and now I’m intrigued. I won’t ask for too much. Find me someone who brings me breakfast to my bed every morning. Someone who goes to late night parties and can keep up with my drinking. They should also keep up with my ever-changing work schedule. One last thing, I’d like someone who helps me take care of my child. That's all I'm asking.\nKind regards
+Boss: Whoa, sounds more like a shopping list. You got that kid?
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Great, now start working.
+
 - To the work room!
 => END

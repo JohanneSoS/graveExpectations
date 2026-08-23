@@ -1,5 +1,10 @@
 ~ start
-Boss: You're the new one? Corporate appears to be desperate, but it is what it is. Ok listen up kid. I read you the request of our fine customers, and you go in the cellar and fulfil the request. Easy as that. Your first request is from a fine lady.
+Boss: You're the new one? 
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Corporate appears to be desperate, but it is what it is. 
+Boss: Ok listen up kid. 
+Boss: I read you the request of our fine customers, and you go in the cellar and fulfil the request. Easy as that. 
+Boss: Your first request is from a fine lady.
 Client: "Dear Grave Expectations Dating Inc.,\nI searched far and wide and couldn't find a partner who pleased all of my requirements, so you're my last hope. I yearn for someone who listens to my Kafka fanfictions. Someone who cares about the lovely birds in my garden while I tend to my flowers. Who sits with me in front of my fireplace but also loves to go out to dinner parties?\nI beg of you, help me find a partner and I will pay you handsomely."
 Boss: Sounds easy, right? You will make her the perfect partner, and I get paid my commission all in a day's work. So down you go and I expect results!
 - To the work room!

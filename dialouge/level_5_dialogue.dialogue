@@ -1,4 +1,21 @@
 ~ start
-Boss: WIP
+Boss: Hey kid!
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: It’s still Sir.
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Great, now that we cleared that up, do you know what's inside this envelope?
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: A new request? Don’t be silly, I print those from my e-mails. 
+Boss: It’s from higher up. If you do good today, you’ll be promoted and that means, you won't be my problem any longer!
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Now where do I have it? Ah, there it is.
+Boss: Pay attention this will be important for my commission.
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Of course, and your promotion.
+Client: Dear Grave Expectations Dating Inc.,\nafter many unsuccessful dates, I decided to use a dating agency. So please help me find a partner. My back isn't what it used to be, so I need someone who can carry my groceries. They should also stay up late and tell me about the stars, listen to my card readings, and keep pace on my strolls.\nPlease help me find a partner.
+Boss: Now that sounds doable. You ready, kid?
+[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+Boss: Good, then get to work.
+
 - To the work room!
 => END
