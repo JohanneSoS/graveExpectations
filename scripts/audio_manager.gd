@@ -53,3 +53,14 @@ func on_location_switch(screen: GameEnums.ActiveScreens):
 			office_ambience_player.volume_db = 1.0
 			radio_music_player.volume_db = 0.0
 			full_music_player.volume_db = 1.0
+
+func play_pitch_randomized_OneShot(oneshot: AudioStream):
+	#randomize()
+	oneshot.pitch_scale = randf_range(0.9,1.1)
+	sfx_player.stream = oneshot
+	sfx_player.play()
+	
+func play_randomized_OneShot(oneshot: Array[AudioStream]):
+	var random_index = randi_range(0, oneshot.size()-1)
+	sfx_player.stream = oneshot[random_index]
+	sfx_player.play()
