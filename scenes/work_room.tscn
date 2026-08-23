@@ -131,6 +131,11 @@ theme_override_font_sizes/font_size = 30
 text = "What was the brief again?
 "
 
+[node name="TutorialButton" type="Button" parent="UI/PanelContainer/MarginContainer/VBoxContainer" unique_id=121224782]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "What do I need to do?"
+
 [node name="BodyPartTooltip" parent="UI" unique_id=27072615 groups=["body_part_tooltip"] instance=ExtResource("8_dftxa")]
 visible = false
 
@@ -143,3 +148,4 @@ stat_row_scene = ExtResource("10_tvpdd")
 
 [connection signal="pressed" from="UI/PanelContainer/MarginContainer/VBoxContainer/FinishLevel" to="." method="_on_finish_level_pressed"]
 [connection signal="pressed" from="UI/PanelContainer/MarginContainer/VBoxContainer/HelpButon" to="." method="_on_help_buton_pressed"]
+[connection signal="pressed" from="UI/PanelContainer/MarginContainer/VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]

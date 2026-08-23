@@ -25,3 +25,8 @@ func _evaluate_level():
 func _on_help_buton_pressed() -> void:
 	var current_data: LevelData = GameState.get_current_level()
 	DialogueManager.show_dialogue_balloon(current_data.brief, "start")
+
+
+func _on_tutorial_button_pressed() -> void:
+	var resource = load("res://dialouge/tutorial_dialogue.dialogue")
+	DialogueManager.show_dialogue_balloon(resource)
