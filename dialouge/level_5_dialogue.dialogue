@@ -7,7 +7,7 @@ Boss: Great, now that we cleared that up, do you know what's inside this envelop
 [shake rate=20.0 level=5 connected=1]bone rattle[/shake]
 Boss: A new request? Don’t be silly, I print those from my e-mails. 
 Boss: It’s from higher up. If you do good today, you’ll be promoted and that means, you won't be my problem any longer!
-[shake rate=20.0 level=5 connected=1]bone rattle[/shake]
+[shake rate=20.0 level=5 connected=1]happy bone rattle[/shake]
 Boss: Now where do I have it? Ah, there it is.
 Boss: Pay attention this will be important for my commission.
 [shake rate=20.0 level=5 connected=1]bone rattle[/shake]

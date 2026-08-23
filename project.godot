@@ -46,6 +46,10 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 dropable=""
 
+[gui]
+
+theme/custom_font="uid://4336ptrojdtu"
+
 [input]
 
 click={
