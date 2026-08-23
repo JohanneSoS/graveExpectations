@@ -56,11 +56,12 @@ func on_location_switch(screen: GameEnums.ActiveScreens):
 
 func play_pitch_randomized_OneShot(oneshot: AudioStream):
 	#randomize()
-	oneshot.pitch_scale = randf_range(0.9,1.1)
+	sfx_player.pitch_scale = randf_range(0.9,1.1)
 	sfx_player.stream = oneshot
 	sfx_player.play()
 	
 func play_randomized_OneShot(oneshot: Array[AudioStream]):
 	var random_index = randi_range(0, oneshot.size()-1)
+	sfx_player.pitch_scale = randf_range(0.9,1.1)
 	sfx_player.stream = oneshot[random_index]
 	sfx_player.play()
