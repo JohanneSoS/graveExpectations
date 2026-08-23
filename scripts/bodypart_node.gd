@@ -63,6 +63,8 @@ func _start_drag():
 		if GameStatManager.current_body_parts.has(body_part_data):
 			GameStatManager.current_body_parts.erase(body_part_data)
 			GameStatManager.update_current_body_stats()
+	
+	AudioManager.play_pitch_randomized_OneShot(AudioManager.drag_bodypart)
 
 
 func _finish_drag():
@@ -108,6 +110,7 @@ func _drop_into_socket(socket: DropSocket):
 		print("ADDED BODY PART: ", body_part_data)
 		print("TOTAL BODY PARTS: ", GameStatManager.current_body_parts.size())
 
+	AudioManager.play_pitch_randomized_OneShot(AudioManager.drop_bodypoart)
 	GameStatManager.update_current_body_stats()
 		
 
