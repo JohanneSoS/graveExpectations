@@ -105,6 +105,12 @@ func _drop_into_socket(socket: DropSocket):
 	if not GameStatManager.current_body_parts.has(body_part_data):
 		GameStatManager.current_body_parts.append(body_part_data)
 
+		print("ADDED BODY PART: ", body_part_data)
+		print("TOTAL BODY PARTS: ", GameStatManager.current_body_parts.size())
+
+	GameStatManager.update_current_body_stats()
+		
+
 	GameStatManager.update_current_body_stats()
 
 

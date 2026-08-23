@@ -5,14 +5,22 @@ extends Node2D
 func _ready():
 	var current_data: LevelData = GameState.get_current_level()
 	level_generator.order = current_data.order
+	GameStatManager.reset_level_stats()
+	GameStatManager.current_order = current_data.order
 	level_generator.generate_level()
 
 func _on_finish_level_pressed() -> void:
-	_evaluate_level()
+	var required_parts = 5
+	var placed_parts := GameStatManager.current_body_parts.size()
+	
+	if placed_parts < required_parts:
+		print("Cannot finish level: ", placed_parts, "/", required_parts, " body parts placed.")
+		return
+	GameStatManager.deliver_body()
 	
 	if GameState.is_last_level():
 		# mit spiel beendet screen ersetzen?
-		get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	else:
 		GameState.advance_level()
 		get_tree().change_scene_to_file("res://scenes/evaluation.tscn")

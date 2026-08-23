@@ -140,10 +140,10 @@ text = "What do I need to do?"
 visible = false
 
 [node name="StatsPanel" parent="UI" unique_id=1637183519 instance=ExtResource("9_gtmpp")]
-offset_left = 1462.0
-offset_top = 37.0
-offset_right = 1899.0
-offset_bottom = 372.0
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 394.0
+offset_bottom = 355.0
 stat_row_scene = ExtResource("10_tvpdd")
 
 [connection signal="pressed" from="UI/PanelContainer/MarginContainer/VBoxContainer/FinishLevel" to="." method="_on_finish_level_pressed"]

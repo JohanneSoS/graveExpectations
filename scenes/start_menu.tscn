@@ -45,6 +45,14 @@ offset_bottom = 113.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1869326403]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 60
+text = "Grave Expectations"
+horizontal_alignment = 1
+
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=151997011]
 layout_mode = 2
 size_flags_horizontal = 4

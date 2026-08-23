@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ckdno0l1k1nc1"]
+
+[ext_resource type="Script" uid="uid://bayshuxepdole" path="res://scripts/end_screen.gd" id="1_6e1uj"]
+[ext_resource type="Texture2D" uid="uid://oedl87jss2lg" path="res://art/background/Score_Background_2.png" id="1_kq7ac"]
+
+[node name="EndScreen" type="Node2D" unique_id=381479040]
+script = ExtResource("1_6e1uj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1573988102]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_kq7ac")
+
+[node name="Label" type="Label" parent="." unique_id=1766009433]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 529.0
+offset_top = 386.0
+offset_right = 1379.0
+offset_bottom = 597.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "You got promoted!
+Thank you for playing."
+horizontal_alignment = 1
+
+[node name="EndButton" type="Button" parent="." unique_id=680420691]
+offset_left = 815.0
+offset_top = 629.0
+offset_right = 1061.0
+offset_bottom = 702.0
+theme_override_font_sizes/font_size = 50
+text = "Quit Game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1103374182]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="EndButton" to="." method="_on_end_button_pressed"]
